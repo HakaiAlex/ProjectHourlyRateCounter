@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VSApp\\repos\\ProjectVSCsharp\\Project\\HourlyRateCounter\\HourlyRateCounter\\HourlyRateCounter.csproj": {}
+    "E:\\MyProjects\\CollaborativeBot\\HourlyRateCounter\\HourlyRateCounter\\HourlyRateCounter.csproj": {}
   },
   "projects": {
-    "D:\\VSApp\\repos\\ProjectVSCsharp\\Project\\HourlyRateCounter\\HourlyRateCounter\\HourlyRateCounter.csproj": {
+    "E:\\MyProjects\\CollaborativeBot\\HourlyRateCounter\\HourlyRateCounter\\HourlyRateCounter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VSApp\\repos\\ProjectVSCsharp\\Project\\HourlyRateCounter\\HourlyRateCounter\\HourlyRateCounter.csproj",
+        "projectUniqueName": "E:\\MyProjects\\CollaborativeBot\\HourlyRateCounter\\HourlyRateCounter\\HourlyRateCounter.csproj",
         "projectName": "HourlyRateCounter",
-        "projectPath": "D:\\VSApp\\repos\\ProjectVSCsharp\\Project\\HourlyRateCounter\\HourlyRateCounter\\HourlyRateCounter.csproj",
-        "packagesPath": "C:\\Users\\UserAk\\.nuget\\packages\\",
-        "outputPath": "D:\\VSApp\\repos\\ProjectVSCsharp\\Project\\HourlyRateCounter\\HourlyRateCounter\\obj\\",
+        "projectPath": "E:\\MyProjects\\CollaborativeBot\\HourlyRateCounter\\HourlyRateCounter\\HourlyRateCounter.csproj",
+        "packagesPath": "C:\\Users\\Nikita&Lira\\.nuget\\packages\\",
+        "outputPath": "E:\\MyProjects\\CollaborativeBot\\HourlyRateCounter\\HourlyRateCounter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\VisualStudio\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\UserAk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nikita&Lira\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -61,12 +60,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.30, 3.1.30]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

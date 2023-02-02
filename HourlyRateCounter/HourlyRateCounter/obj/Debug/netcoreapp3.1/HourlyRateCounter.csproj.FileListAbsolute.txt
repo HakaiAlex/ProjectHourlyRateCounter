@@ -1,0 +1,17 @@
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\bin\Debug\netcoreapp3.1\HourlyRateCounter.exe
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\bin\Debug\netcoreapp3.1\HourlyRateCounter.deps.json
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\bin\Debug\netcoreapp3.1\HourlyRateCounter.runtimeconfig.json
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\bin\Debug\netcoreapp3.1\HourlyRateCounter.runtimeconfig.dev.json
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\bin\Debug\netcoreapp3.1\HourlyRateCounter.dll
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\bin\Debug\netcoreapp3.1\HourlyRateCounter.pdb
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\bin\Debug\netcoreapp3.1\Telegram.Bot.dll
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\obj\Debug\netcoreapp3.1\HourlyRateCounter.csproj.AssemblyReference.cache
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\obj\Debug\netcoreapp3.1\HourlyRateCounter.GeneratedMSBuildEditorConfig.editorconfig
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\obj\Debug\netcoreapp3.1\HourlyRateCounter.AssemblyInfoInputs.cache
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\obj\Debug\netcoreapp3.1\HourlyRateCounter.AssemblyInfo.cs
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\obj\Debug\netcoreapp3.1\HourlyRateCounter.csproj.CoreCompileInputs.cache
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\obj\Debug\netcoreapp3.1\HourlyRateCounter.csproj.CopyComplete
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\obj\Debug\netcoreapp3.1\HourlyRateCounter.dll
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\obj\Debug\netcoreapp3.1\HourlyRateCounter.pdb
+E:\MyProjects\CollaborativeBot\HourlyRateCounter\HourlyRateCounter\obj\Debug\netcoreapp3.1\HourlyRateCounter.genruntimeconfig.cache

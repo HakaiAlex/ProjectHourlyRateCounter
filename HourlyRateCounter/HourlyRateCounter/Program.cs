@@ -2,32 +2,77 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Telegram.Bot;
+using Telegram.Bot.Exceptions;
+using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
+using Telegram.Bot.Types.Enums;
 
 namespace HourlyRateCounter
 {
     internal class Program
     {
-        private static string token { get; set; } = "6088264173:AAHYkH900CQx1MQ5mLdyFYbTakwieMnq1Fo";
-        private static TelegramBotClient client;
-        static void Main(string[] args)
+        private static ITelegramBotClient botClient;
+        static async Task Main(string[] args)
         {
-            client = new TelegramBotClient(token);
-            client.StartReceiving(Update,Error);
+            botClient = new TelegramBotClient("6121060658:AAGgih7ocxZAg8LtQZMWPl03g9-KlVLRNVM");
+            using CancellationTokenSource cts = new CancellationTokenSource();
+
+            // StartReceiving does not block the caller thread. Receiving is done on the ThreadPool.
+            ReceiverOptions receiverOptions = new ReceiverOptions
+            {
+                AllowedUpdates = Array.Empty<UpdateType>() // receive all update types
+            };
+
+            botClient.StartReceiving(
+                updateHandler: HandleUpdateAsync,
+                pollingErrorHandler: HandlePollingErrorAsync,
+                receiverOptions: receiverOptions,
+                cancellationToken: cts.Token
+            );
+
+            var me = await botClient.GetMeAsync();
+
+            Console.WriteLine($"Start listening for @{me.Username}");
             Console.ReadLine();
+
+            // Send cancellation request to stop bot
+            cts.Cancel();
+
+
         }
 
-        async static Task Update(ITelegramBotClient botClient, Update update, CancellationToken token)
+        static async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
-            var message = update.Message;   
+            // Only process Message updates: https://core.telegram.org/bots/api#message // Only process text messages
+            if (update.Message is { } message && message.Text is { } messageText)
+            {
+
+
+                var chatId = message.Chat.Id;
+
+                Console.WriteLine($"Received a '{messageText}' message in chat {chatId}.");
+
+                // Echo received message text
+                Message sentMessage = await botClient.SendTextMessageAsync(
+                    chatId: chatId,
+                    text: "You said:\n" + messageText,
+                    cancellationToken: cancellationToken);
+            }
+            else
+                return;
         }
 
-        private static Task Error(ITelegramBotClient arg1, Exception arg2, CancellationToken arg3)
+        static Task HandlePollingErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var ErrorMessage = exception switch
+            {
+                ApiRequestException apiRequestException
+                    => $"Telegram API Error:\n[{apiRequestException.ErrorCode}]\n{apiRequestException.Message}",
+                _ => exception.ToString()
+            };
+
+            Console.WriteLine(ErrorMessage);
+            return Task.CompletedTask;
         }
-
-
-        //Изменения
     }
 }
