@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "2Jt71F8rmA2WkfhLro6H3yL/ydBRPnYDDf6Fg0lcmt9hVzj1wZlllUxxX8vX9I4VU6M2Ow0HRhkSRgutNPwNIQ==",
+  "dgSpecHash": "LrQWgXJfl+f9NxmUWmK9yuQS0xRN+NzH0PnFb0c6bWpXmke9nw6ASd38aYTcwrFO8QrlA2PMAKIQ9L0+IyY6YA==",
   "success": true,
   "projectFilePath": "D:\\VSApp\\repos\\ProjectVSCsharp\\Project\\HourlyRateCounter\\HourlyRateCounter\\HourlyRateCounter.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\UserAk\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\UserAk\\.nuget\\packages\\telegram.bot\\18.0.0\\telegram.bot.18.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
