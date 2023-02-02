@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using Telegram.Bot;
@@ -12,6 +13,8 @@ namespace HourlyRateCounter
     internal class Program
     {
         private static ITelegramBotClient botClient;
+        static Stopwatch stopwatch = new Stopwatch();
+        static TimeSpan interval;
         static async Task Main(string[] args)
         {
             botClient = new TelegramBotClient("6121060658:AAGgih7ocxZAg8LtQZMWPl03g9-KlVLRNVM");
@@ -52,11 +55,41 @@ namespace HourlyRateCounter
 
                 Console.WriteLine($"Received a '{messageText}' message in chat {chatId}.");
 
+                Message sentMessage;
+                 
+
+                // Пишу обработчик команд/кнопок
+                switch (messageText)
+                {
+                    case "/Go":
+                        {
+                            stopwatch.Start();
+                            sentMessage = await botClient.SendTextMessageAsync(
+                            chatId: chatId,
+                            text: "Вы начали работать",
+                            cancellationToken: cancellationToken); // логика обработки
+                        }
+                        break;
+
+                    case "/Finish":
+                        {
+                            stopwatch.Stop();
+                            interval = stopwatch.Elapsed;
+                            stopwatch.Reset();
+                            sentMessage = await botClient.SendTextMessageAsync(
+                            chatId: chatId,
+                            text: "Вы закончили работать, вы потратили " + interval.Minutes,
+                            cancellationToken: cancellationToken); // логика обработки
+                        }
+                        break;
+
+                }
+
                 // Echo received message text
-                Message sentMessage = await botClient.SendTextMessageAsync(
-                    chatId: chatId,
-                    text: "You said:\n" + messageText,
-                    cancellationToken: cancellationToken);
+                //Message sentMessage = await botClient.SendTextMessageAsync(
+                //    chatId: chatId,
+                //    text: "You said:\n" + messageText,
+                //    cancellationToken: cancellationToken);
             }
             else
                 return;

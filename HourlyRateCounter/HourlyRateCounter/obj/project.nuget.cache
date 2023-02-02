@@ -1,15 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "XSrESl01cc/1YbOiF1BlXL0PEI3DFW558gaBl3gxoYsNp3pgVEaT424djtfPrKyYfMo2xY/RkVPleru3OfLuHg==",
+  "dgSpecHash": "1bZj3rqZalGk08piP+5vJ8cjSed/61IMc0lREEsPl4YbimMUxsmItb5HatCXe8c4hY87CT3NPXwL8g8qkZYUhg==",
   "success": true,
   "projectFilePath": "E:\\MyProjects\\CollaborativeBot\\HourlyRateCounter\\HourlyRateCounter\\HourlyRateCounter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nikita&Lira\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
-    "C:\\Users\\Nikita&Lira\\.nuget\\packages\\telegram.bot\\18.0.0\\telegram.bot.18.0.0.nupkg.sha512",
-    "C:\\Users\\Nikita&Lira\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.30\\microsoft.netcore.app.host.win-x64.3.1.30.nupkg.sha512",
-    "C:\\Users\\Nikita&Lira\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\Nikita&Lira\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\Nikita&Lira\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+    "C:\\Users\\Nikita&Lira\\.nuget\\packages\\telegram.bot\\18.0.0\\telegram.bot.18.0.0.nupkg.sha512"
   ],
   "logs": []
 }
