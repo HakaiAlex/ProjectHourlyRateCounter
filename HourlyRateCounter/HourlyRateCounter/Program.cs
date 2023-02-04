@@ -10,6 +10,7 @@ using Telegram.Bot.Types.Enums;
 
 namespace HourlyRateCounter
 {
+    //Проверяю пуши p.s. Sasha
     internal class Program
     {
         private static ITelegramBotClient botClient;
