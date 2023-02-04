@@ -18,13 +18,13 @@ namespace HourlyRateCounter
         static TimeSpan interval;
         static async Task Main(string[] args)
         {
-            botClient = new TelegramBotClient("6121060658:AAGgih7ocxZAg8LtQZMWPl03g9-KlVLRNVM");
+            botClient = new TelegramBotClient("6088264173:AAHYkH900CQx1MQ5mLdyFYbTakwieMnq1Fo");
             using CancellationTokenSource cts = new CancellationTokenSource();
 
-            // StartReceiving does not block the caller thread. Receiving is done on the ThreadPool.
+            // Начало приема не блокирует поток вызывающего абонента. Прием осуществляется в пуле потоков(ThreadPool).
             ReceiverOptions receiverOptions = new ReceiverOptions
             {
-                AllowedUpdates = Array.Empty<UpdateType>() // receive all update types
+                AllowedUpdates = Array.Empty<UpdateType>() // получать все типы обновлений
             };
 
             botClient.StartReceiving(
