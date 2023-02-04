@@ -1,8 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Diagnostics;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Telegram.Bot;
@@ -21,7 +18,7 @@ namespace HourlyRateCounter
 
         public static async Task MakingConnection(string token)
         {
-            botClient = new TelegramBotClient(token);
+            botClient = new TelegramBotClient(token); //!!!!!!!!!!Только эту строчку переделал.
 
             using CancellationTokenSource cts = new CancellationTokenSource();
 
