@@ -78,12 +78,6 @@ namespace HourlyRateCounter
                         break;
 
                 }
-
-                // Echo received message text
-                //Message sentMessage = await botClient.SendTextMessageAsync(
-                //    chatId: chatId,
-                //    text: "You said:\n" + messageText,
-                //    cancellationToken: cancellationToken);
             }
             else
                 return;
