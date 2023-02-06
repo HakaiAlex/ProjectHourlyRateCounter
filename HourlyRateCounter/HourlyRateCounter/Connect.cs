@@ -56,7 +56,7 @@ namespace HourlyRateCounter
             {
                 var chatId = message.Chat.Id;
                 Message sentMessage;
-                if (message.Text == "/start")
+                if (message.Text == "/start") //!!!!!!!!!!!!!ВОТ ТУТ НАДО СДЕЛАТЬ, НАВЕРНО, ЗА МЕСТО IF => SWITCH
                 {
 
                     await botClient.SendTextMessageAsync(
