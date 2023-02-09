@@ -50,63 +50,60 @@ namespace HourlyRateCounter
 
         static async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
-            
+
             //// Обработка только обновления сообщений: https://core.telegram.org/bots/api#message // Обработка только текстовых сообщений
             if (update.Message is { } message && message.Text is { } messageText)
             {
                 var chatId = message.Chat.Id;
                 Message sentMessage;
-                if (message.Text == "/start") //!!!!!!!!!!!!!ВОТ ТУТ НАДО СДЕЛАТЬ, НАВЕРНО, ЗА МЕСТО IF => SWITCH
+                //await botClient.SendTextMessageAsync(
+                //    chatId: chatId,
+                //    replyMarkup: GetButtons(),
+                //    text: "Вы начали работать",
+                //    cancellationToken: cancellationToken);
+
+
+                switch (messageText)
                 {
-
-                    await botClient.SendTextMessageAsync(
-                        chatId: chatId,
-                        text: "/start",
-                        cancellationToken: cancellationToken,
-                        replyMarkup: GetButtons());
-
-                    
-
-                    await botClient.SendTextMessageAsync(
-                        chatId: chatId,
-                        replyMarkup: GetButtons(),
-                        text: "Вы начали работать",
-                        cancellationToken: cancellationToken);
+                    case "/start": //!!!!!!!!!!!!!ВОТ ТУТ НАДО СДЕЛАТЬ, НАВЕРНО, ЗА МЕСТО IF => SWITCH
+                        {
+                            await botClient.SendTextMessageAsync(
+                            chatId: chatId,
+                            text: "Выберите действие",
+                            cancellationToken: cancellationToken,
+                            replyMarkup: GetButtons());
+                        }
+                        break;
 
 
-                    switch (messageText)
-                    {
-                        case "Начало смены":
-                            {
-                                stopwatch.Start();
-                                sentMessage = await botClient.SendTextMessageAsync(
-                                chatId: chatId,
-                                text: "Вы начали работать",
-                                cancellationToken: cancellationToken); // логика обработки
-                            }
-                            break;
+                    case "Начало смены":
+                        {
+                            stopwatch.Start();
+                            sentMessage = await botClient.SendTextMessageAsync(
+                            chatId: chatId,
+                            text: "Вы начали работать",
+                            cancellationToken: cancellationToken); // логика обработки
+                        }
+                        break;
 
-                        case "/Finish":
-                            {
-                                stopwatch.Stop();
-                                interval = stopwatch.Elapsed;
-                                stopwatch.Reset();
-                                sentMessage = await botClient.SendTextMessageAsync(
-                                chatId: chatId,
-                                text: "Вы закончили работать, вы потратили " + interval.Minutes,
-                                cancellationToken: cancellationToken); // логика обработки
-                            }
-                            break;
+                    case "Конец смены":
+                        {
+                            stopwatch.Stop();
+                            interval = stopwatch.Elapsed;
+                            stopwatch.Reset();
+                            sentMessage = await botClient.SendTextMessageAsync(
+                            chatId: chatId,
+                            text: "Вы закончили работать, вы потратили " + interval.Minutes,
+                            cancellationToken: cancellationToken); // логика обработки
+                        }
+                        break;
+                    default:
+                        await botClient.SendTextMessageAsync(
+                            chatId: chatId,
+                            text: message.Text = "Напишите /start для старта");
+                        break;
 
-                    }
                 }
-                else
-                {
-                    await botClient.SendTextMessageAsync(
-                        chatId: chatId,
-                        text: message.Text = "Напишите /start для старта");
-                }
-                
             }
             else
                 return;
